@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Method Zone - Tech Solutions & Tutorials</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🚀 Method Zone</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#courses" class="nav-link">Courses</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Transform Your Digital Future</h1>
+            <p class="hero-subtitle">Expert tech solutions, comprehensive tutorials, and cutting-edge innovation all in one place</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('services')">Our Services</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('courses')">View Courses</button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <h3>500+</h3>
+                <p>Students Trained</p>
+            </div>
+            <div class="stat">
+                <h3>50+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat">
+                <h3>98%</h3>
+                <p>Success Rate</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive tech solutions for your business needs</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Building intelligent systems that automate processes and generate insights for your business growth.</p>
+                    <ul class="service-features">
+                        <li>Custom ML Models</li>
+                        <li>Predictive Analytics</li>
+                        <li>Computer Vision</li>
+                        <li>Natural Language Processing</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Creating responsive, user-centric web applications with modern technologies and best practices.</p>
+                    <ul class="service-features">
+                        <li>Frontend & Backend Development</li>
+                        <li>E-commerce Solutions</li>
+                        <li>Web Applications</li>
+                        <li>API Development</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Cybersecurity</h3>
+                    <p>Protecting your digital assets with advanced security solutions and comprehensive threat monitoring.</p>
+                    <ul class="service-features">
+                        <li>Security Audits</li>
+                        <li>Penetration Testing</li>
+                        <li>Security Monitoring</li>
+                        <li>Compliance Solutions</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>Data Engineering</h3>
+                    <p>Designing and building robust data infrastructure for actionable insights and business intelligence.</p>
+                    <ul class="service-features">
+                        <li>Data Pipelines</li>
+                        <li>Cloud Architecture</li>
+                        <li>BI Solutions</li>
+                        <li>Data Warehousing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2 class="section-title">Featured Courses</h2>
+            <p class="section-subtitle">Master in-demand tech skills with our comprehensive tutorials</p>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-icon">🐍</div>
+                    <h3>Python Programming</h3>
+                    <p class="course-description">Master Python from basics to advanced topics with real-world projects</p>
+                    <div class="course-info">
+                        <span class="level">Beginner to Advanced</span>
+                        <span class="duration">8 weeks</span>
+                        <span class="price">$99</span>
+                    </div>
+                    <ul class="course-features">
+                        <li>Variables & Data Types</li>
+                        <li>Functions & Modules</li>
+                        <li>Object-Oriented Programming</li>
+                        <li>Web Development Basics</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="showEnrollmentModal('Python Programming')">Enroll Now</button>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">📊</div>
+                    <h3>Data Science & ML</h3>
+                    <p class="course-description">Learn data analysis and machine learning with real-world projects</p>
+                    <div class="course-info">
+                        <span class="level">Intermediate</span>
+                        <span class="duration">10 weeks</span>
+                        <span class="price">$149</span>
+                    </div>
+                    <ul class="course-features">
+                        <li>Pandas & NumPy</li>
+                        <li>Data Visualization</li>
+                        <li>ML Algorithms</li>
+                        <li>Real Projects</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="showEnrollmentModal('Data Science & ML')">Enroll Now</button>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p class="course-description">Full-stack web development with modern technologies</p>
+                    <div class="course-info">
+                        <span class="level">Beginner to Advanced</span>
+                        <span class="duration">12 weeks</span>
+                        <span class="price">$199</span>
+                    </div>
+                    <ul class="course-features">
+                        <li>HTML/CSS/JavaScript</li>
+                        <li>React.js Framework</li>
+                        <li>Node.js Backend</li>
+                        <li>Database Integration</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="showEnrollmentModal('Web Development')">Enroll Now</button>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">🛡️</div>
+                    <h3>Cybersecurity</h3>
+                    <p class="course-description">Learn essential cybersecurity concepts and practices</p>
+                    <div class="course-info">
+                        <span class="level">Beginner</span>
+                        <span class="duration">6 weeks</span>
+                        <span class="price">$129</span>
+                    </div>
+                    <ul class="course-features">
+                        <li>Network Security</li>
+                        <li>Encryption Methods</li>
+                        <li>Ethical Hacking</li>
+                        <li>Security Tools</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="showEnrollmentModal('Cybersecurity')">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Method Zone</h2>
+                    <p>We are a passionate team of tech enthusiasts, developers, and educators dedicated to empowering individuals and businesses through technology.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <h4>Innovation Driven</h4>
+                                <p>Staying ahead with cutting-edge technologies and methodologies</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Community Focused</h4>
+                                <p>Building a supportive learning community for tech enthusiasts</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-medal"></i>
+                            <div>
+                                <h4>Quality First</h4>
+                                <p>Delivering premium solutions and educational content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-laptop-code"></i>
+                        <p>Technology Innovation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Ready to start your tech journey? Contact us today!</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>contact@methodzone.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>123 Tech Street, Innovation City</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest tech insights and course updates</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Method Zone</h3>
+                    <p>Transforming digital futures through innovative technology solutions and comprehensive education.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="#">Python Programming</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Cybersecurity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">AI & ML Solutions</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Cybersecurity</a></li>
+                        <li><a href="#">Data Engineering</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Method Zone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="enrollmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Enroll in <span id="courseTitle"></span></h3>
+            <form id="enrollmentForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number">
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Experience Level</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your learning goals..." rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Submit Enrollment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
