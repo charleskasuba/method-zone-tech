@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming Mastery - Method Zone</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html" style="text-decoration: none;">
+                    <h2>🎓 Method Zone</h2>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../index.html#courses" class="nav-link">All Courses</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 120px;">
+        <div class="course-header">
+            <div class="course-hero">
+                <div class="course-icon-large">🐍</div>
+                <h1>Python Programming Mastery</h1>
+                <p class="course-subtitle">Complete Python course from absolute beginner to advanced developer</p>
+                <div class="course-meta-large">
+                    <span class="duration"><i class="fas fa-clock"></i> 8 Weeks</span>
+                    <span class="level"><i class="fas fa-signal"></i> Beginner to Advanced</span>
+                    <span class="price"><i class="fas fa-tag"></i> Free</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content">
+            <div class="course-sidebar">
+                <div class="sidebar-section">
+                    <h3>Course Contents</h3>
+                    <div class="lesson-list">
+                        <div class="lesson-item active">Introduction to Python</div>
+                        <div class="lesson-item">Variables & Data Types</div>
+                        <div class="lesson-item">Control Structures</div>
+                        <div class="lesson-item">Functions & Modules</div>
+                        <div class="lesson-item">Object-Oriented Programming</div>
+                        <div class="lesson-item">File Handling</div>
+                        <div class="lesson-item">Web Development Basics</div>
+                        <div class="lesson-item">Data Analysis with Pandas</div>
+                        <div class="lesson-item">Automation Projects</div>
+                        <div class="lesson-item">Final Project</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-main">
+                <div class="lesson-content">
+                    <h2>Welcome to Python Programming!</h2>
+                    <p>This comprehensive course will take you from absolute beginner to proficient Python developer. You'll learn through hands-on projects and real-world examples.</p>
+
+                    <h3>What You'll Build:</h3>
+                    <ul>
+                        <li>Web applications with Flask</li>
+                        <li>Data analysis scripts</li>
+                        <li>Automation tools</li>
+                        <li>Games and utilities</li>
+                        <li>APIs and web services</li>
+                    </ul>
+
+                    <div class="code-example">
+                        <h4>Your First Python Program:</h4>
+                        <pre><code># Welcome to Python!
+print("Hello, World!")
+
+# Variables and basic operations
+name = "Method Zone Student"
+age = 25
+print(f"Hello {name}, you are {age} years old!")</code></pre>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary btn-large">
+                            <i class="fas fa-play"></i> Start Learning
+                        </button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-download"></i> Download Exercises
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .course-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .course-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .course-icon-large {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .course-meta-large {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .course-meta-large span {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        .course-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .course-sidebar {
+            background: var(--background-alt);
+            padding: 2rem;
+            border-radius: 12px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-section h3 {
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .lesson-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .lesson-item {
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .lesson-item:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .lesson-item.active {
+            border-left-color: var(--primary);
+            background: var(--primary);
+            color: white;
+        }
+
+        .course-main {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .lesson-content h2 {
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .lesson-content h3 {
+            margin: 2rem 0 1rem 0;
+            color: var(--text);
+        }
+
+        .code-example {
+            background: var(--background-alt);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary);
+        }
+
+        .code-example h4 {
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        pre {
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .course-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .course-sidebar {
+                position: static;
+            }
+            
+            .course-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+    <script src="../script.js"></script>
+</body>
+</html>
