@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Web Development - Method Zone</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html" style="text-decoration: none;">
+                    <h2>🎓 Method Zone</h2>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../index.html#courses" class="nav-link">All Courses</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 120px;">
+        <div class="course-header">
+            <div class="course-hero" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+                <div class="course-icon-large">🌐</div>
+                <h1>Full-Stack Web Development</h1>
+                <p class="course-subtitle">Build modern web applications from frontend to backend. Master the complete development stack.</p>
+                <div class="course-meta-large">
+                    <span class="duration"><i class="fas fa-clock"></i> 12 Weeks</span>
+                    <span class="level"><i class="fas fa-signal"></i> Beginner to Advanced</span>
+                    <span class="price"><i class="fas fa-tag"></i> Free</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content">
+            <div class="course-sidebar">
+                <div class="sidebar-section">
+                    <h3>Course Curriculum</h3>
+                    <div class="lesson-list">
+                        <div class="lesson-item active">Web Fundamentals</div>
+                        <div class="lesson-item">HTML5 & Semantic Web</div>
+                        <div class="lesson-item">CSS3 & Modern Layouts</div>
+                        <div class="lesson-item">JavaScript ES6+</div>
+                        <div class="lesson-item">React.js Framework</div>
+                        <div class="lesson-item">Node.js & Express</div>
+                        <div class="lesson-item">Database Design</div>
+                        <div class="lesson-item">RESTful APIs</div>
+                        <div class="lesson-item">Authentication & Security</div>
+                        <div class="lesson-item">Deployment & DevOps</div>
+                    </div>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Tech Stack</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item frontend">
+                            <span>Frontend</span>
+                            <div class="tech-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                            </div>
+                        </div>
+                        <div class="tech-item backend">
+                            <span>Backend</span>
+                            <div class="tech-tags">
+                                <span>Node.js</span>
+                                <span>Express</span>
+                                <span>MongoDB</span>
+                                <span>REST APIs</span>
+                            </div>
+                        </div>
+                        <div class="tech-item tools">
+                            <span>Tools</span>
+                            <div class="tech-tags">
+                                <span>Git</span>
+                                <span>VS Code</span>
+                                <span>Postman</span>
+                                <span>Heroku</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-main">
+                <div class="lesson-content">
+                    <h2>Become a Full-Stack Developer!</h2>
+                    <p>Learn to build complete web applications from the ground up. This course covers both frontend and backend technologies, preparing you for real-world development roles.</p>
+
+                    <div class="career-stats">
+                        <div class="career-stat">
+                            <h3>💻 23%</h3>
+                            <p>Faster than average job growth</p>
+                        </div>
+                        <div class="career-stat">
+                            <h3>💰 $85K+</h3>
+                            <p>Average entry-level salary</p>
+                        </div>
+                        <div class="career-stat">
+                            <h3>🌍 100%</h3>
+                            <p>Remote work opportunities</p>
+                        </div>
+                    </div>
+
+                    <h3>Projects You'll Build:</h3>
+                    <div class="web-projects">
+                        <div class="web-project">
+                            <div class="project-preview" style="background: #4f46e5;"></div>
+                            <div class="project-info">
+                                <h4>🎯 E-Commerce Store</h4>
+                                <p>Full-featured online store with shopping cart, payments, and admin dashboard</p>
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                    <span>Stripe API</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="web-project">
+                            <div class="project-preview" style="background: #059669;"></div>
+                            <div class="project-info">
+                                <h4>📱 Social Media App</h4>
+                                <p>Real-time social platform with posts, comments, and user profiles</p>
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>Socket.io</span>
+                                    <span>MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="web-project">
+                            <div class="project-preview" style="background: #dc2626;"></div>
+                            <div class="project-info">
+                                <h4>📊 Project Management</h4>
+                                <p>Team collaboration tool with tasks, deadlines, and progress tracking</p>
+                                <div class="project-tech">
+                                    <span>Vue.js</span>
+                                    <span>Express</span>
+                                    <span>PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Sample Code: Modern React Component</h3>
+                    <div class="code-example">
+                        <pre><code>import React, { useState, useEffect } from 'react';
+import './App.css';
+
+function App() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchUsers();
+  }, []);
+
+  const fetchUsers = async () => {
+    try {
+      const response = await fetch('/api/users');
+      const data = await response.json();
+      setUsers(data);
+      setLoading(false);
+    } catch (error) {
+      console.error('Error fetching users:', error);
+    }
+  };
+
+  return (
+    <div className="app">
+      <header className="app-header">
+        <h1>User Dashboard</h1>
+      </header>
+      <main>
+        {loading ? (
+          <div className="loading">Loading users...</div>
+        ) : (
+          <div className="users-grid">
+            {users.map(user => (
+              <div key={user.id} className="user-card">
+                <h3>{user.name}</h3>
+                <p>{user.email}</p>
+                <span className="role">{user.role}</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </main>
+    </div>
+  );
+}
+
+export default App;</code></pre>
+                    </div>
+
+                    <div class="learning-path">
+                        <h3>🚀 Your Learning Journey:</h3>
+                        <div class="path-steps">
+                            <div class="path-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Frontend Foundation</h4>
+                                    <p>Master HTML, CSS, and JavaScript fundamentals</p>
+                                </div>
+                            </div>
+                            <div class="path-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>React Development</h4>
+                                    <p>Build dynamic user interfaces with modern React</p>
+                                </div>
+                            </div>
+                            <div class="path-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Backend with Node.js</h4>
+                                    <p>Create robust server-side applications and APIs</p>
+                                </div>
+                            </div>
+                            <div class="path-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Full-Stack Projects</h4>
+                                    <p>Integrate frontend and backend into complete apps</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary btn-large">
+                            <i class="fas fa-code"></i> Start Coding Now
+                        </button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-laptop-code"></i> View Project Gallery
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .course-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .course-hero {
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .course-icon-large {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .course-meta-large {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .course-meta-large span {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        .course-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .course-sidebar {
+            background: var(--background-alt);
+            padding: 2rem;
+            border-radius: 12px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-section h3 {
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .lesson-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .lesson-item {
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .lesson-item:hover {
+            background: #f59e0b;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .lesson-item.active {
+            border-left-color: #f59e0b;
+            background: #f59e0b;
+            color: white;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .tech-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .tech-item span:first-child {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+            color: var(--text);
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tags span {
+            background: var(--background-alt);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .frontend .tech-tags span { background: #dbeafe; color: #1d4ed8; }
+        .backend .tech-tags span { background: #f0f9ff; color: #0e7490; }
+        .tools .tech-tags span { background: #fef3c7; color: #92400e; }
+
+        .course-main {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .lesson-content h2 {
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .lesson-content h3 {
+            margin: 2rem 0 1rem 0;
+            color: var(--text);
+        }
+
+        .career-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .career-stat {
+            background: var(--background-alt);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .career-stat h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .web-projects {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .web-project {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 1rem;
+            background: var(--background-alt);
+            padding: 1.5rem;
+            border-radius: 12px;
+            align-items: start;
+        }
+
+        .project-preview {
+            width: 100px;
+            height: 60px;
+            border-radius: 8px;
+            background: #4f46e5;
+        }
+
+        .project-info h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .project-tech {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .project-tech span {
+            background: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .code-example {
+            background: var(--background-alt);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid #f59e0b;
+        }
+
+        pre {
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        }
+
+        .learning-path {
+            background: linear-gradient(135deg, #fef3c7 0%, #fef7cd 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .path-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .path-step {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: #f59e0b;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .course-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .course-sidebar {
+                position: static;
+            }
+            
+            .course-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .web-project {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-preview {
+                width: 100%;
+                height: 80px;
+            }
+        }
+    </style>
+
+    <script src="../script.js"></script>
+</body>
+</html>
