@@ -32,6 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
+        if (btn.textContent.includes('Our Services') || btn.textContent.includes('Explore Services')) {
+            btn.addEventListener('click', function() {
+                scrollToSection('services');
+            });
+        }
+        
         if (btn.textContent.includes('Why Choose Us')) {
             btn.addEventListener('click', function() {
                 scrollToSection('features');
@@ -83,6 +89,52 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    // Service data
+    const serviceData = {
+        'AI & Machine Learning': {
+            icon: '🤖',
+            description: 'Get expert AI and machine learning solutions tailored to your business needs. We build custom models that drive real business value.',
+            features: ['Custom ML Models', 'Predictive Analytics', 'Computer Vision', 'NLP Solutions'],
+            startingPrice: '$2,500',
+            timeline: '4-8 weeks'
+        },
+        'Web Development': {
+            icon: '💻',
+            description: 'Professional web development services to build your online presence. From simple websites to complex web applications.',
+            features: ['Responsive Design', 'E-commerce Solutions', 'Web Applications', 'API Integration'],
+            startingPrice: '$1,800',
+            timeline: '3-6 weeks'
+        },
+        'Cybersecurity': {
+            icon: '🛡️',
+            description: 'Protect your business with comprehensive cybersecurity solutions. Stay ahead of threats with our expert security services.',
+            features: ['Security Audits', 'Penetration Testing', 'Threat Monitoring', 'Compliance Solutions'],
+            startingPrice: '$3,000',
+            timeline: '2-4 weeks'
+        },
+        'Data Engineering': {
+            icon: '📈',
+            description: 'Build robust data infrastructure that transforms raw data into actionable business intelligence.',
+            features: ['Data Pipelines', 'Cloud Architecture', 'BI Solutions', 'Data Warehousing'],
+            startingPrice: '$2,200',
+            timeline: '4-10 weeks'
+        },
+        'Mobile App Development': {
+            icon: '📱',
+            description: 'Create cross-platform mobile applications that deliver exceptional user experiences on any device.',
+            features: ['iOS Development', 'Android Development', 'React Native', 'App Store Deployment'],
+            startingPrice: '$2,800',
+            timeline: '6-12 weeks'
+        },
+        'Cloud Solutions': {
+            icon: '☁️',
+            description: 'Scalable cloud infrastructure and migration services for modern business needs. Future-proof your technology stack.',
+            features: ['AWS Services', 'Google Cloud', 'Azure Solutions', 'Cloud Migration'],
+            startingPrice: '$1,500',
+            timeline: '2-6 weeks'
+        }
+    };
+
     // Show course preview modal
     window.showCoursePreview = function(courseKey) {
         const modal = document.getElementById('previewModal');
@@ -121,10 +173,98 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Close modal
+    // Show service inquiry modal
+    window.showServiceModal = function(serviceName) {
+        const modal = document.getElementById('serviceModal');
+        const serviceContent = document.getElementById('serviceContent');
+        const service = serviceData[serviceName];
+        
+        if (service) {
+            serviceContent.innerHTML = `
+                <div class="service-modal-content">
+                    <div class="service-modal-icon">${service.icon}</div>
+                    <h2>${serviceName}</h2>
+                    <p>${service.description}</p>
+                    
+                    <div style="background: var(--background-alt); padding: 1.5rem; border-radius: 12px; margin: 2rem 0;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: center;">
+                            <div>
+                                <h4 style="color: var(--text); margin-bottom: 0.5rem;">Starting Price</h4>
+                                <p style="color: var(--primary); font-weight: 600; font-size: 1.25rem;">${service.startingPrice}</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--text); margin-bottom: 0.5rem;">Timeline</h4>
+                                <p style="color: var(--text-light); font-weight: 500;">${service.timeline}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin: 2rem 0;">
+                        <h4 style="color: var(--text); margin-bottom: 1rem;">What's Included:</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                            ${service.features.map(feature => `
+                                <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem; background: var(--background-alt); border-radius: 6px;">
+                                    <i class="fas fa-check" style="color: var(--success);"></i>
+                                    <span style="font-size: 0.875rem;">${feature}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <form class="service-form" onsubmit="handleServiceInquiry(event, '${serviceName}')">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tell us about your project..." rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Get Free Consultation
+                        </button>
+                    </form>
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+        }
+    };
+
+    // Close modals
     window.closeModal = function() {
         const modal = document.getElementById('previewModal');
         modal.style.display = 'none';
+    };
+
+    window.closeServiceModal = function() {
+        const modal = document.getElementById('serviceModal');
+        modal.style.display = 'none';
+    };
+
+    // Handle service inquiry form submission
+    window.handleServiceInquiry = function(event, serviceName) {
+        event.preventDefault();
+        
+        // Get form data
+        const formData = {
+            service: serviceName,
+            name: event.target.querySelector('input[type="text"]').value,
+            email: event.target.querySelector('input[type="email"]').value,
+            phone: event.target.querySelector('input[type="tel"]').value,
+            message: event.target.querySelector('textarea').value
+        };
+        
+        // Show success message
+        showNotification(`Thank you for your interest in our ${serviceName} services! We'll contact you within 24 hours.`, 'success');
+        
+        // Close modal and reset form
+        closeServiceModal();
+        event.target.reset();
     };
 
     // Random course selector
@@ -136,9 +276,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close modal when clicking outside
     window.onclick = function(event) {
-        const modal = document.getElementById('previewModal');
-        if (event.target === modal) {
+        const previewModal = document.getElementById('previewModal');
+        const serviceModal = document.getElementById('serviceModal');
+        
+        if (event.target === previewModal) {
             closeModal();
+        }
+        if (event.target === serviceModal) {
+            closeServiceModal();
         }
     };
 
@@ -201,7 +346,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.course-card, .feature-card, .path-card');
+    const animateElements = document.querySelectorAll('.course-card, .feature-card, .path-card, .service-card');
     
     animateElements.forEach(el => {
         el.style.opacity = '0';
@@ -211,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Add some interactive features
-    document.querySelectorAll('.course-card').forEach(card => {
+    document.querySelectorAll('.course-card, .service-card').forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-10px) scale(1.02)';
         });
@@ -229,15 +374,91 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             closeModal();
+            closeServiceModal();
         }
     });
 
-    // Simple form handling
-    document.querySelectorAll('form').forEach(form => {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your interest! This is a demo site. In a real application, this would submit your information.');
-            this.reset();
-        });
+    // Simple form handling for contact form
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
+        this.reset();
     });
+
+    // Notification system
+    function showNotification(message, type = 'info') {
+        // Remove existing notifications
+        const existingNotifications = document.querySelectorAll('.notification');
+        existingNotifications.forEach(notification => notification.remove());
+
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+            <span>${message}</span>
+            <button onclick="this.parentElement.remove()">&times;</button>
+        `;
+        
+        // Add styles for notification
+        notification.style.cssText = `
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: ${type === 'success' ? '#10b981' : '#3b82f6'};
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            animation: slideInRight 0.3s ease;
+            max-width: 400px;
+        `;
+        
+        notification.querySelector('button').style.cssText = `
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 0;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // Add CSS for notification animation
+        if (!document.querySelector('#notification-styles')) {
+            const style = document.createElement('style');
+            style.id = 'notification-styles';
+            style.textContent = `
+                @keyframes slideInRight {
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            if (notification.parentElement) {
+                notification.remove();
+            }
+        }, 5000);
+    }
+
+    // Make notification function globally available
+    window.showNotification = showNotification;
 });
