@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Method Zone - Master Tech Skills with Free Courses</title>
+    <title>Method Zone - Tech Solutions & Free Courses</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -12,11 +12,12 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>🎓 Method Zone</h2>
+                <h2>🚀 Method Zone</h2>
             </div>
             <div class="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
-                <a href="#courses" class="nav-link">All Courses</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#courses" class="nav-link">Courses</a>
                 <a href="#features" class="nav-link">Features</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -36,7 +37,7 @@
             <p class="hero-subtitle">Free, comprehensive courses designed by industry experts. Start learning today and transform your career.</p>
             <div class="hero-buttons">
                 <button class="btn btn-primary" onclick="scrollToSection('courses')">Browse Courses</button>
-                <button class="btn btn-secondary" onclick="scrollToSection('features')">Why Choose Us</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('services')">Our Services</button>
             </div>
         </div>
         <div class="hero-stats">
@@ -51,6 +52,190 @@
             <div class="stat">
                 <h3>24/7</h3>
                 <p>Available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Professional Services</h2>
+            <p class="section-subtitle">Comprehensive tech solutions for businesses and individuals</p>
+            
+            <div class="services-grid">
+                <!-- AI & ML Service -->
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI & Machine Learning</h3>
+                    <p class="service-description">Building intelligent systems that automate processes and generate valuable insights for your business growth.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Custom ML Models</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Predictive Analytics</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-eye"></i>
+                            <span>Computer Vision</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-language"></i>
+                            <span>Natural Language Processing</span>
+                        </div>
+                    </div>
+                    <div class="service-cta">
+                        <span class="service-price">Starting at $2,500</span>
+                        <button class="btn btn-outline" onclick="showServiceModal('AI & Machine Learning')">Get Quote</button>
+                    </div>
+                </div>
+
+                <!-- Web Development Service -->
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p class="service-description">Creating responsive, user-centric web applications with modern technologies and best practices.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Frontend & Backend</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>E-commerce Solutions</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Web Applications</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-plug"></i>
+                            <span>API Development</span>
+                        </div>
+                    </div>
+                    <div class="service-cta">
+                        <span class="service-price">Starting at $1,800</span>
+                        <button class="btn btn-outline" onclick="showServiceModal('Web Development')">Get Quote</button>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity Service -->
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Cybersecurity</h3>
+                    <p class="service-description">Protecting your digital assets with advanced security solutions and comprehensive threat monitoring.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security Audits</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-user-secret"></i>
+                            <span>Penetration Testing</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-binoculars"></i>
+                            <span>Security Monitoring</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-file-contract"></i>
+                            <span>Compliance Solutions</span>
+                        </div>
+                    </div>
+                    <div class="service-cta">
+                        <span class="service-price">Starting at $3,000</span>
+                        <button class="btn btn-outline" onclick="showServiceModal('Cybersecurity')">Get Quote</button>
+                    </div>
+                </div>
+
+                <!-- Data Engineering Service -->
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>Data Engineering</h3>
+                    <p class="service-description">Designing and building robust data infrastructure for actionable insights and business intelligence.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-database"></i>
+                            <span>Data Pipelines</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud Architecture</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>BI Solutions</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-warehouse"></i>
+                            <span>Data Warehousing</span>
+                        </div>
+                    </div>
+                    <div class="service-cta">
+                        <span class="service-price">Starting at $2,200</span>
+                        <button class="btn btn-outline" onclick="showServiceModal('Data Engineering')">Get Quote</button>
+                    </div>
+                </div>
+
+                <!-- Mobile App Development -->
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Mobile App Development</h3>
+                    <p class="service-description">Creating cross-platform mobile applications that deliver exceptional user experiences.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-apple"></i>
+                            <span>iOS Development</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-android"></i>
+                            <span>Android Development</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-mobile"></i>
+                            <span>React Native</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>App Store Deployment</span>
+                        </div>
+                    </div>
+                    <div class="service-cta">
+                        <span class="service-price">Starting at $2,800</span>
+                        <button class="btn btn-outline" onclick="showServiceModal('Mobile App Development')">Get Quote</button>
+                    </div>
+                </div>
+
+                <!-- Cloud Solutions -->
+                <div class="service-card">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud Solutions</h3>
+                    <p class="service-description">Scalable cloud infrastructure and migration services for modern business needs.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS Services</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fab fa-google"></i>
+                            <span>Google Cloud</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fab fa-microsoft"></i>
+                            <span>Azure Solutions</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-sync-alt"></i>
+                            <span>Cloud Migration</span>
+                        </div>
+                    </div>
+                    <div class="service-cta">
+                        <span class="service-price">Starting at $1,500</span>
+                        <button class="btn btn-outline" onclick="showServiceModal('Cloud Solutions')">Get Quote</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -197,8 +382,8 @@
     <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
-            <h2 class="section-title">Why Learn With Method Zone?</h2>
-            <p class="section-subtitle">We're committed to making quality tech education accessible to everyone</p>
+            <h2 class="section-title">Why Choose Method Zone?</h2>
+            <p class="section-subtitle">We're committed to making quality tech education and services accessible to everyone</p>
             
             <div class="features-grid">
                 <div class="feature-card">
@@ -209,8 +394,14 @@
 
                 <div class="feature-card">
                     <div class="feature-icon">🆓</div>
-                    <h3>Completely Free</h3>
-                    <p>All our courses are 100% free forever. No hidden costs, no subscriptions, no limitations.</p>
+                    <h3>Free Courses</h3>
+                    <p>All our educational courses are 100% free forever. No hidden costs, no subscriptions, no limitations.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>Professional Services</h3>
+                    <p>Get expert tech solutions for your business with our affordable professional services.</p>
                 </div>
 
                 <div class="feature-card">
@@ -229,12 +420,6 @@
                     <div class="feature-icon">🛠️</div>
                     <h3>Hands-On Practice</h3>
                     <p>Interactive coding exercises, challenges, and projects to reinforce your learning.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h3>Career-Focused Skills</h3>
-                    <p>Learn the most in-demand technologies and skills that employers are looking for today.</p>
                 </div>
             </div>
         </div>
@@ -289,7 +474,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2 class="section-title">About Method Zone</h2>
-                    <p>We believe that quality tech education should be accessible to everyone, regardless of their background or financial situation. That's why we've created comprehensive, project-based courses that are completely free.</p>
+                    <p>We believe that quality tech education and services should be accessible to everyone, regardless of their background or financial situation. That's why we've created comprehensive, project-based courses that are completely free, while also offering professional services for businesses.</p>
                     
                     <div class="mission-stats">
                         <div class="mission-stat">
@@ -327,17 +512,82 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Ready to start your tech journey or need professional services? Contact us today!</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>contact@methodzone.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>123 Tech Street, Innovation City</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Mon - Fri: 9AM - 6PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="service-type" required>
+                            <option value="">Select Service</option>
+                            <option value="ai-ml">AI & Machine Learning</option>
+                            <option value="web-dev">Web Development</option>
+                            <option value="cybersecurity">Cybersecurity</option>
+                            <option value="data-engineering">Data Engineering</option>
+                            <option value="mobile-app">Mobile App Development</option>
+                            <option value="cloud">Cloud Solutions</option>
+                            <option value="course">Course Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Start Your Tech Journey?</h2>
-                <p>Join thousands of students who have transformed their careers with our free courses. Start learning today!</p>
+                <h2>Ready to Transform Your Tech Future?</h2>
+                <p>Whether you want to learn new skills or need professional tech solutions, we're here to help you succeed.</p>
                 <div class="cta-buttons">
-                    <a href="#courses" class="btn btn-primary btn-large">Browse All Courses</a>
-                    <button class="btn btn-secondary btn-large" onclick="showRandomCourse()">
-                        <i class="fas fa-random"></i> Surprise Me
-                    </button>
+                    <a href="#courses" class="btn btn-primary btn-large">Start Learning Free</a>
+                    <a href="#services" class="btn btn-secondary btn-large">Explore Services</a>
                 </div>
             </div>
         </div>
@@ -348,8 +598,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>🎓 Method Zone</h3>
-                    <p>Free, comprehensive tech education for everyone. Transform your career with our project-based courses.</p>
+                    <h3>🚀 Method Zone</h3>
+                    <p>Free tech education and professional services. Transform your career and business with our expert solutions.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-github"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
@@ -367,26 +617,28 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Resources</h4>
+                    <h4>Services</h4>
                     <ul>
-                        <li><a href="#">Learning Paths</a></li>
-                        <li><a href="#">Project Gallery</a></li>
-                        <li><a href="#">Code Examples</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="#services">AI & ML Solutions</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Cybersecurity</a></li>
+                        <li><a href="#services">Data Engineering</a></li>
+                        <li><a href="#services">Mobile Apps</a></li>
+                        <li><a href="#services">Cloud Solutions</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Support</h4>
+                    <h4>Company</h4>
                     <ul>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Contribute</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Method Zone. All courses are free and open to everyone.</p>
+                <p>&copy; 2024 Method Zone. All courses are free and open to everyone. Professional services available.</p>
             </div>
         </div>
     </footer>
@@ -397,6 +649,16 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <div id="previewContent">
                 <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Inquiry Modal -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeServiceModal()">&times;</span>
+            <div id="serviceContent">
+                <!-- Dynamic service content will be inserted here -->
             </div>
         </div>
     </div>
